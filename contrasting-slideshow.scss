@@ -1,0 +1,49 @@
+
+
+@import "scss/_mixins.scss";
+
+
+.contrasting-slideshow{
+    border:1px solid lightgreen;
+
+    position: relative;
+    display:block;
+
+    // height:30vh;
+    // min-height:300px;
+    // max-height:500px;
+    width:100%;
+
+}
+
+
+
+.contrasting-slideshow{
+
+    .cs-slide{
+        display:block;
+        position:absolute;
+        top:0; left:0;
+        // bottom:0; right:0;
+        width:100%;
+        height:100%;
+
+        .img-war{
+            display: block;
+            position:relative;
+            width:100%; height:auto;
+            z-index:2;
+            opacity:1;
+            // border:10px solid gold;
+        }
+
+        .img-peace{
+            display: block;
+            position: absolute;
+            top:0; left:0;
+            width:100%; height:auto;
+            z-index: 1;
+            opacity:1;
+        }
+    }
+}
