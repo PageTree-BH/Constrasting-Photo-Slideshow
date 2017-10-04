@@ -70,34 +70,64 @@ var CS = {
 
                 var tlm = new TimelineMax({
                     paused:true,
+                    delay:1,
                     onComplete:function(){
                         thisSlideShow.slick('slickNext');
                     }
                 });
 
 
+                //
+                // if(type === "fade"){
+                //     window.console.log("fade");
+                //     // tlm.fromTo(war, 5,  {opacity:1, scale:1},
+                //     //                     {scale:1.5, opacity:0, ease:Power1.easeIn});
+                //     tlm.fromTo(war, 5,  {opacity:1},
+                //                         {opacity:0, ease:Power1.easeIn});
+                //
+                // }else if (type=== "left") {
+                //     window.console.log("left");
+                //     // tlm.fromTo(war, 5,  {width:'60%'},
+                //                         // {width:'40%', ease:Power1.easeInOut});
+                //
+                // }else if (type=== "right") {
+                //     window.console.log("right");
+                //     // TweenMax.set(war, {width:'60%', right:0, left:'initial' });
+                //     // tlm.fromTo(war, 5,  {width:'60%'},
+                //                         // {width:'40%', ease:Power1.easeInOut});
+                //
+                // }
+                //
 
-                if(type === "fade"){
-                    window.console.log("fade");
-                    // tlm.fromTo(war, 5,  {opacity:1, scale:1},
-                    //                     {scale:1.5, opacity:0, ease:Power1.easeIn});
-                    tlm.fromTo(war, 5,  {opacity:1},
-                                        {opacity:0, ease:Power1.easeIn});
 
-                }else if (type=== "left") {
-                    window.console.log("left");
-                    tlm.fromTo(war, 5,  {width:'60%'},
-                                        {width:'40%', ease:Power1.easeInOut});
-
-                }else if (type=== "right") {
-                    window.console.log("right");
-                    TweenMax.set(war, {width:'60%', right:0, left:'initial' });
-                    tlm.fromTo(war, 5,  {width:'60%'},
-                                        {width:'40%', ease:Power1.easeInOut});
-
-                }
+                // var cssFilter;
+                    // isWebkit = navigator.userAgent.indexOf('AppleWebKit') != -1
 
 
+                tlm.fromTo(peace,8, { width:'30%' },
+                                    { width:'70%',ease: Power2.easeInOut}, 'a');
+
+                tlm.fromTo(war, 8,  { width:'70%' },
+                                    // {opacity:0, width:'80%',  ease: SlowMo.ease.config(0.7, 0.7, false)});
+                                    { width:'30%'
+                                    ,ease: Power2.easeInOut
+                                    // ,onUpdate: function(tl){
+                                    //     // convert timeline progress to a percentage
+                                    //     var tlp = (tlm.progress()*100) >> 0;
+                                    //     // set brightness value on each update
+                                    //     if(isWebkit){
+                                    //         cssFilter = {'-webkit-filter':'grayscale(' + tlp + '%)'};
+                                    //         //  cssFilter = {'-webkit-filter':'grayscale(' + tlp + '%)'};
+                                    //     } else {
+                                    //         cssFilter = {filter:'grayscale(' + tlp + '%)'};
+                                    //         //  cssFilter = {filter:'grayscale(' + tlp + '%)'};
+                                    //     }
+                                    //     TweenMax.set(war, cssFilter);
+                                    // }
+                                }, 'a');
+
+
+                tlm.to(war, 1, {opacity:1});
 
 
                 // tlm.play();
