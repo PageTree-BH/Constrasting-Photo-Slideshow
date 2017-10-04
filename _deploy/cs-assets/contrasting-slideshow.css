@@ -2,30 +2,49 @@
   border: 1px solid lightgreen;
   position: relative;
   display: block;
-  width: 100%; }
+  width: 100%;
+  height: 40vw;
+  background-color: lightgray; }
 
-.contrasting-slideshow .cs-slide {
+.contrasting-slideshow.slick-slider .slick-list, .contrasting-slideshow.slick-slider .slick-track {
+  height: 100%; }
+.contrasting-slideshow.slick-slider .cs-slide {
   display: block;
   position: absolute;
   top: 0;
   left: 0;
+  bottom: 0;
+  right: 0;
   width: 100%;
-  height: 100%; }
-  .contrasting-slideshow .cs-slide .img-war {
-    display: block;
-    position: relative;
-    width: 100%;
-    height: auto;
-    z-index: 2;
-    opacity: 1; }
-  .contrasting-slideshow .cs-slide .img-peace {
+  height: 100%;
+  overflow: hidden; }
+  .contrasting-slideshow.slick-slider .cs-slide .cs-war,
+  .contrasting-slideshow.slick-slider .cs-slide .cs-peace {
     display: block;
     position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
     top: 0;
     left: 0;
-    width: 100%;
-    height: auto;
-    z-index: 1;
-    opacity: 1; }
+    bottom: 0;
+    right: 0;
+    background-position: top left;
+    background-size: cover;
+    background-repeat: no-repeat; }
+    .contrasting-slideshow.slick-slider .cs-slide .cs-war img,
+    .contrasting-slideshow.slick-slider .cs-slide .cs-peace img {
+      position: block;
+      width: 100%;
+      height: auto; }
+  .contrasting-slideshow.slick-slider .cs-slide .cs-war {
+    z-index: 2; }
+  .contrasting-slideshow.slick-slider .cs-slide .cs-peace {
+    z-index: 1; }
+
+.cs-show1 .cs-war {
+  background-image: url("http://lorempixel.com/1000/400/abstract/4"); }
+.cs-show1 .cs-peace {
+  background-image: url("http://lorempixel.com/1000/400/abstract/1"); }
 
 /*# sourceMappingURL=contrasting-slideshow.css.map */

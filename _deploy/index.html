@@ -44,25 +44,29 @@
 
 
 
-<div class="contrasting-slideshow" data-cs-type=""  >
+<div class="contrasting-slideshow"  >
 
-    <div class="cs-slide">
-        <div class="img-war">
-            <img src="http://lorempixel.com/50/20/abstract/1">
+    <!-- <div class="cs-slide cs-show1" data-cs-type="fade"  >
+        <div class="cs-war"></div>
+        <div class="cs-peace"></div>
+    </div> -->
+
+    <div class="cs-slide" data-cs-type="left">
+        <div class="cs-war " data-pt-imgswap>
+            <img src="http://lorempixel.com/1000/400/sports/2">
         </div>
-        <div class="img-peace">
-            <img src="http://lorempixel.com/1000/400/abstract/1">
+        <div class="cs-peace " data-pt-imgswap>
+            <img src="http://lorempixel.com/1000/400/sports/3">
         </div>
     </div>
 
-    <div class="cs-slide">
-        <img class="img-war" src="http://lorempixel.com/50/20/abstract/3">
-        <img class="img-peace" src="http://lorempixel.com/1000/400/abstract/3">
-    </div>
-
-    <div class="cs-slide">
-        <img class="img-war" src="http://lorempixel.com/50/20/abstract/7">
-        <img class="img-peace" src="http://lorempixel.com/1000/400/abstract/7">
+    <div class="cs-slide" data-cs-type="right">
+        <div class="cs-war" data-pt-imgswap>
+            <img src="http://lorempixel.com/1000/400/sports/7">
+        </div>
+        <div class="cs-peace" data-pt-imgswap>
+            <img src="http://lorempixel.com/1000/400/sports/5">
+        </div>
     </div>
 
 </div>
@@ -103,6 +107,8 @@
 
     <!-- PT BASE SITE  -->
     <script src="assets/site.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/EndArrayPlugin.min.js"></script>
 
     <script src="./cs-assets/contrasting-slideshow.min.js"></script>
 
