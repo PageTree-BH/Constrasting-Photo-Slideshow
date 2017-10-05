@@ -2,22 +2,24 @@
 
 @import "scss/_mixins.scss";
 
+h3{
+    text-align:center;
+    margin-bottom:5vh;
+}
 
 .contrasting-slideshow{
-    border:1px solid lightgreen;
-
+    // border:1px solid lightgreen;
     position: relative;
     display:block;
-
     // height:30vh;
     // min-height:300px;
     // max-height:500px;
     width:100%;
     height:30vw;
+    // height:60vw;
     background-color:lightgray;
-    margin:auto;
+    margin:0 auto 20vh auto;
 }
-
 
 
 .contrasting-slideshow.slick-slider{
@@ -49,6 +51,14 @@
         }
         &[data-cs-type="right"] {
             flex-direction: row-reverse;
+        }
+        &[data-cs-type="fade"] {
+            flex-direction: row;
+            .cs-war, .cs-peace {
+                with:100%;
+                position: absolute;
+                background-size: cover !important;
+            }
         }
 
 

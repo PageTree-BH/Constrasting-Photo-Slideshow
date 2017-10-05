@@ -44,7 +44,7 @@ var CS = {
                 infinite: true,
                 autoplaySpeed: 1000,
                 draggable: true,
-                speed: 1000,
+                speed: 3000,
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 autoplay: false
@@ -101,22 +101,28 @@ var CS = {
 
 
                 var cssFilter;
-                    isWebkit = navigator.userAgent.indexOf('AppleWebKit') !== -1
+                    isWebkit = navigator.userAgent.indexOf('AppleWebKit') !== -1;
 
 
-                if(type === "none"){
+                if (type === "none"){
                     window.console.log("none");
                     tlm.to(war, 8, {opacity:1});
 
-                }else{
+                }else if (type === "fade") {
+                    tlm.set([war,peace], {opacity:1, width:'100%', backgroundSize:'cover', position:'absolute'});
+
+                    tlm.fromTo(war, 2,  { opacity:1, delay:1 },
+                                        { opacity:0, ease: Power1.easeOut});
+
+                }else if (type === "left" || type === "right") {
                     // tlm.to(war, 1, {opacity:1});
                     tlm.fromTo(peace, 8, { width:'40%' },
                                         { width:'60%',ease: Power4.easeInOut}, 'a');
 
                     tlm.fromTo(war, 8,  { width:'60%' },
                                         // {opacity:0, width:'80%',  ease: SlowMo.ease.config(0.7, 0.7, false)});
-                                        { width:'40%'
-                                        ,ease: Power4.easeInOut
+                                        { width:'40%',
+                                        ease: Power4.easeInOut
                                         // ,onUpdate: function(tl){
                                         //     // convert timeline progress to a percentage
                                         //     var tlp = (tlm.progress()*100) >> 0;
