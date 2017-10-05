@@ -3,8 +3,9 @@
   position: relative;
   display: block;
   width: 100%;
-  height: 40vw;
-  background-color: lightgray; }
+  height: 30vw;
+  background-color: lightgray;
+  margin: auto; }
 
 .contrasting-slideshow.slick-slider .slick-list, .contrasting-slideshow.slick-slider .slick-track {
   height: 100%; }
@@ -47,9 +48,10 @@
     display: block;
     width: 100%;
     height: 100%;
-    background-position: center;
-    background-size: cover;
+    position: relative;
+    background-position: center center;
     background-repeat: no-repeat;
+    background-size: 60vw auto !important;
     overflow: hidden; }
     .contrasting-slideshow.slick-slider .cs-slide .cs-war img,
     .contrasting-slideshow.slick-slider .cs-slide .cs-peace img {
@@ -62,24 +64,23 @@
     -webkit-flex: 0 0 auto;
         -ms-flex: 0 0 auto;
             flex: 0 0 auto;
-    filter: grayscale(100%);
-    -webkit-filter: grayscale(1);
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
-    -webkit-filter: url(#greyscale);
-            filter: url(#greyscale);
-    -webkit-filter: gray;
-            filter: gray; }
+    width: 40%; }
   .contrasting-slideshow.slick-slider .cs-slide .cs-peace {
     z-index: 1;
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 auto;
         -ms-flex: 0 0 auto;
-            flex: 0 0 auto; }
+            flex: 0 0 auto;
+    width: 60%; }
 
-.cs-show1 .cs-war {
-  background-image: url("http://lorempixel.com/g/1000/400/abstract/4"); }
-.cs-show1 .cs-peace {
-  background-image: url("http://lorempixel.com/1000/400/abstract/1"); }
+.grayscale {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(1);
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  -webkit-filter: url(#greyscale);
+          filter: url(#greyscale);
+  -webkit-filter: gray;
+          filter: gray; }
 
 /*# sourceMappingURL=contrasting-slideshow.css.map */

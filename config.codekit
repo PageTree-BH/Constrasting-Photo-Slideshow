@@ -192,6 +192,116 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/_deploy\/cs-assets\/imgs\/boat-fishing.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 81598,
+		"inputAbbreviatedPath": "\/_deploy\/cs-assets\/imgs\/boat-fishing.jpg",
+		"outputAbbreviatedPath": "\/_deploy\/cs-assets\/imgs\/boat-fishing.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_deploy\/cs-assets\/imgs\/boat-war.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 100805,
+		"inputAbbreviatedPath": "\/_deploy\/cs-assets\/imgs\/boat-war.jpg",
+		"outputAbbreviatedPath": "\/_deploy\/cs-assets\/imgs\/boat-war.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_deploy\/cs-assets\/imgs\/camp-fishing.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 282120,
+		"inputAbbreviatedPath": "\/_deploy\/cs-assets\/imgs\/camp-fishing.jpg",
+		"outputAbbreviatedPath": "\/_deploy\/cs-assets\/imgs\/camp-fishing.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_deploy\/cs-assets\/imgs\/camp-war.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 196885,
+		"inputAbbreviatedPath": "\/_deploy\/cs-assets\/imgs\/camp-war.jpg",
+		"outputAbbreviatedPath": "\/_deploy\/cs-assets\/imgs\/camp-war.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_deploy\/cs-assets\/imgs\/river-fishing.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 303751,
+		"inputAbbreviatedPath": "\/_deploy\/cs-assets\/imgs\/river-fishing.jpg",
+		"outputAbbreviatedPath": "\/_deploy\/cs-assets\/imgs\/river-fishing.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_deploy\/cs-assets\/imgs\/river-war.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 191063,
+		"inputAbbreviatedPath": "\/_deploy\/cs-assets\/imgs\/river-war.jpg",
+		"outputAbbreviatedPath": "\/_deploy\/cs-assets\/imgs\/river-war.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_deploy\/cs-assets\/imgs\/wading-fishing.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 365017,
+		"inputAbbreviatedPath": "\/_deploy\/cs-assets\/imgs\/wading-fishing.jpg",
+		"outputAbbreviatedPath": "\/_deploy\/cs-assets\/imgs\/wading-fishing.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_deploy\/cs-assets\/imgs\/wading-war.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 122277,
+		"inputAbbreviatedPath": "\/_deploy\/cs-assets\/imgs\/wading-war.jpg",
+		"outputAbbreviatedPath": "\/_deploy\/cs-assets\/imgs\/wading-war.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_deploy\/cs-assets\/imgs\/weapon-fishing.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 354152,
+		"inputAbbreviatedPath": "\/_deploy\/cs-assets\/imgs\/weapon-fishing.jpg",
+		"outputAbbreviatedPath": "\/_deploy\/cs-assets\/imgs\/weapon-fishing.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_deploy\/cs-assets\/imgs\/weapon-war.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 108226,
+		"inputAbbreviatedPath": "\/_deploy\/cs-assets\/imgs\/weapon-war.jpg",
+		"outputAbbreviatedPath": "\/_deploy\/cs-assets\/imgs\/weapon-war.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/_deploy\/index copy.html": {
 		"fileType": 8192,
 		"ignore": 0,
