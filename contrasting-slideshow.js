@@ -3,6 +3,10 @@ console:true
 
 */
 
+
+// @codekit-append "linework.js";
+
+
 window.console.log('contrasting slideshow boiii');
 
 
@@ -11,16 +15,18 @@ window.console.log('contrasting slideshow boiii');
 
 var CS = {
     _defaultSlick_Single: {
-            fade: true,
-            dots: true,
-            arrows: false,
-            infinite: true,
-            autoplaySpeed: 3000,
-            speed: 1000,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            autoplay: false
-        },
+        fade: true,
+        dots: true,
+        arrows: false,
+        infinite: true,
+        autoplaySpeed: 3000,
+        speed: 1000,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: false
+    },
+
+
 
     build: function () {
         window.console.log('!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!');
