@@ -1,6 +1,19 @@
+.cs-lineworkSVG {
+  display: block;
+  border: 1px solid red;
+  width: 60%;
+  margin: auto;
+  position: relative;
+  left: -10%; }
+
+.cs-headline {
+  position: absolute;
+  top: 0;
+  left: 0; }
+
 h3 {
   text-align: center;
-  margin-bottom: 5vh; }
+  margin-bottom: 1vh; }
 
 .contrasting-slideshow {
   position: relative;
@@ -8,7 +21,7 @@ h3 {
   width: 100%;
   height: 30vw;
   background-color: lightgray;
-  margin: 0 auto 20vh auto; }
+  margin: 0 auto 10vh auto; }
 
 .contrasting-slideshow.slick-slider .slick-list, .contrasting-slideshow.slick-slider .slick-track {
   height: 100%; }

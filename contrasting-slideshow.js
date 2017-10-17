@@ -1,19 +1,26 @@
 /*
-console:true
-
+console,
+TimelineMax,
+cssFilter,
+Power1,
+Power2,
+Power3,
+Power4,
+Power5
 */
 
 
-// @codekit-append "linework.js";
+// @codekit-append "cs-linework.js";
 
 
 window.console.log('contrasting slideshow boiii');
 
 
-
-
+// TO DISABLE CONSOLE LOGS:
+PT._isDevMode = false;
 
 var CS = {
+
     _defaultSlick_Single: {
         fade: true,
         dots: true,
@@ -27,9 +34,8 @@ var CS = {
     },
 
 
-
     build: function () {
-        window.console.log('!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!');
+        // window.console.log('!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!');
 
         // $('[data-pt-slick-single]').each(function(i, val){
         $('.contrasting-slideshow').each(function(i, val){
@@ -56,19 +62,19 @@ var CS = {
                 autoplay: false
             });
 
-            // slickNext
+            // slickNext 
             // slickPause
             // slickPlay
 
             var slides = thisSlideShow.find('.cs-slide');
             var tlms = [];
 
-            window.console.log(slides);
+            // window.console.log(slides);
 
             $(slides).each(function(i, thing){
                 var slide = $(thing);
 
-                window.console.log(slide);
+                // window.console.log(slide);
 
                 var type = slide.data('cs-type');
                 var war = slide.find('.cs-war');
@@ -111,7 +117,7 @@ var CS = {
 
 
                 if (type === "none"){
-                    window.console.log("none");
+                    // window.console.log("none");
                     tlm.to(war, 8, {opacity:1});
 
                 }else if (type === "fade") {
@@ -164,7 +170,7 @@ var CS = {
             //   window.console.log(direction);
             //   // left
             // });
-            //
+
             // // On edge hit
             // thisSlideShow.on('edge', function(event, slick, direction){
             //   window.console.log('edge was hit');
@@ -172,21 +178,19 @@ var CS = {
 
             // On before slide change
             thisSlideShow.on('beforeChange', function(event, slick, currentSlide, nextSlide){
-              window.console.log(nextSlide);
-              tlms[nextSlide].restart();
+                // window.console.log(nextSlide);
+                tlms[nextSlide].restart();
             });
 
             thisSlideShow.on('afterChange', function(event, slick, currentSlide, nextSlide){
-            //   window.console.log(currentSlide);
-            //   window.console.log( tlms[currentSlide] );
-            //   tlms[currentSlide].slick('restart');
-              tlms[currentSlide].play();
+                //   window.console.log(currentSlide);
+                //   window.console.log( tlms[currentSlide] );
+                //   tlms[currentSlide].slick('restart');
+                tlms[currentSlide].play();
             });
 
 
             thisSlideShow.slick('slickNext');
-
-
 
 
         });

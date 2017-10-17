@@ -1,0 +1,8 @@
+body {
+  border: 10px solid rebeccapurple !important; }
+
+svg#circles {
+  border: 1px solid red;
+  width: 80%;
+  margin: auto;
+  position: relative; }

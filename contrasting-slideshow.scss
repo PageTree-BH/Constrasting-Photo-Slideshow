@@ -1,10 +1,13 @@
 
 
 @import "scss/_mixins.scss";
+@import "scss/cs-linework.scss";
+
+
 
 h3{
     text-align:center;
-    margin-bottom:5vh;
+    margin-bottom:1vh;
 }
 
 .contrasting-slideshow{
@@ -18,7 +21,7 @@ h3{
     height:30vw;
     // height:60vw;
     background-color:lightgray;
-    margin:0 auto 20vh auto;
+    margin:0 auto 10vh auto;
 }
 
 
