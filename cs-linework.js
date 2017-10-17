@@ -154,9 +154,9 @@ circlesAnim.init();
 
 var linesAnim = {
 
-    num:15,
+    num:12,
     lines:[],
-    origX:[],
+    orig:[],
     origY:[],
     svg:document.getElementById("linesSVG"),
 
@@ -169,22 +169,23 @@ var linesAnim = {
         var tlm = new TimelineMax({paused:true, delay:2, ease:Linear.easeNone});
 
         for (var i = 0; i < this.num; i++) {
+            var newLine = this.buildLine( i * 3 );
+            this.svg.appendChild(   newLine  );
+            this.lines.push( newLine );
 
         }
 
-        this.lines = $(this.svg).find('lines');
+        var linesBackwards = this.lines.reverse();
 
-        this.svg.appendChild(   this.buildLine(2)   );
-        this.svg.appendChild(   this.buildLine(5)   );
-        this.svg.appendChild(   this.buildLine(9)   );
-        this.svg.appendChild(   this.buildLine(19)  );
+        for (var j = 0; j < this.lines.length; j++) {
+            tlm.to(linesBackwards[j], 1, {
+                x:j * 9 * 2 *j*0.3,
+                ease:Power1.easeInOut
+            }, '-=0.7');
+        }
 
 
-        var thisline = this.buildLine(40);
-
-        this.svg.appendChild(  thisline   );
-
-        TweenMax.to(thisline, 4, {x:200});
+        tlm.play();
 
     },
 
