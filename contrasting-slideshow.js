@@ -10,7 +10,8 @@ Power5
 */
 
 
-// @codekit-append "cs-linework.js";
+// @codekit-append "circlesAnim.js";
+// @codekit-append "linesAnim.js";
 
 
 window.console.log('contrasting slideshow boiii');
@@ -35,7 +36,7 @@ var CS = {
 
 
     build: function () {
-        // window.console.log('!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!');
+        window.console.log('!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!');
 
         // $('[data-pt-slick-single]').each(function(i, val){
         $('.contrasting-slideshow').each(function(i, val){
@@ -62,12 +63,13 @@ var CS = {
                 autoplay: false
             });
 
-            // slickNext 
+            // slickNext
             // slickPause
             // slickPlay
 
             var slides = thisSlideShow.find('.cs-slide');
             var tlms = [];
+            var anims = [];
 
             // window.console.log(slides);
 
@@ -75,21 +77,40 @@ var CS = {
                 var slide = $(thing);
 
                 // window.console.log(slide);
-
+                var anim = slide.data('cs-anim');
                 var type = slide.data('cs-type');
                 var war = slide.find('.cs-war');
                 var peace = slide.find('.cs-peace');
 
+                // slide.anim = anim;
+                // console.log('... ', slide.anim);
+
+                // if(anim){
+                    // var thisAnim = $('#'+anim);
+                    // var thisAnim = document.getElementById(anim);
+                    // console.log(thisAnim);
+                // }
+
+                // anims[i] = thisAnim;
+                anims[i] = anim;
+
                 var tlm = new TimelineMax({
                     paused:true,
-                    delay:1,
+                    // delay:1,
+                    // onUpdate:function(){
+                        // console.log('~', tlm.progress());
+                    // },
+                    // onStart:function(){
+                        // if(anim){
+                        //     console.log('anim:', anim);
+                        // }
+                    // },
+
                     onComplete:function(){
                         thisSlideShow.slick('slickNext');
                     }
                 });
 
-
-                //
                 // if(type === "fade"){
                 //     window.console.log("fade");
                 //     // tlm.fromTo(war, 5,  {opacity:1, scale:1},
@@ -109,12 +130,9 @@ var CS = {
                 //                         // {width:'40%', ease:Power1.easeInOut});
                 //
                 // }
-                //
-
 
                 var cssFilter;
                     isWebkit = navigator.userAgent.indexOf('AppleWebKit') !== -1;
-
 
                 if (type === "none"){
                     // window.console.log("none");
@@ -155,11 +173,8 @@ var CS = {
 
                 tlm.to(war, 1, {opacity:1});
 
-
                 // tlm.play();
                 tlms[i] = tlm;
-
-
 
             });
 
@@ -178,15 +193,47 @@ var CS = {
 
             // On before slide change
             thisSlideShow.on('beforeChange', function(event, slick, currentSlide, nextSlide){
-                // window.console.log(nextSlide);
+                // window.console.log('beforeChange '+nextSlide);
+
+                // console.log('anims[before]', anims[currentSlide]);
+
+                if(anims[nextSlide] === 'circlesAnim'){
+                    circlesAnim.reset();
+                }else if(anims[nextSlide] === 'linesAnim'){
+                    linesAnim.reset();
+                }
+
+
+                if(anims[nextSlide] != undefined){
+                    // anims[currentSlide].play();
+                }
                 tlms[nextSlide].restart();
+
             });
 
+
             thisSlideShow.on('afterChange', function(event, slick, currentSlide, nextSlide){
+                // window.console.log('afterChange '+nextSlide);
                 //   window.console.log(currentSlide);
                 //   window.console.log( tlms[currentSlide] );
                 //   tlms[currentSlide].slick('restart');
+
+                // console.log('anims[after]', anims[currentSlide]);
+
+                if(anims[currentSlide] === 'circlesAnim'){
+                    circlesAnim.play();
+                }else if(anims[currentSlide] === 'linesAnim'){
+                    linesAnim.play();
+                }
                 tlms[currentSlide].play();
+
+                // anims[currentSlide].play();
+                // linesAnim.tlm.play();
+                // circlesAnim.tlm.tweenTo(circlesAnim.tlm.totalDuration()*0.8);
+
+                // linesAnim.play();
+                // circlesAnim.play();
+
             });
 
 

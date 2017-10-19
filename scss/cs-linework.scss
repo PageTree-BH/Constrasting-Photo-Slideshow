@@ -3,20 +3,43 @@
 
 .cs-lineworkSVG{
     display: block;
-    border:1px solid red;
+    // border:1px solid red;
     width:60%;
     margin:auto;
     position: relative;
     left:-10%;
 }
 
+.cs-slide{
+    position: relative;
+    .cs-lineworkSVG{
+        position:absolute;
+        // border:1px solid green;
+        z-index:99;
+        width:70%;
+        left:50%;
+        top:70%;
+        transform:translate(-50%, -50%);
+    }
+    .cs-headline{
+        position:absolute;
+        display:block;
+        bottom:0;
+        right:0;
+        z-index:99;
+        color:white;
+        font-weight:bold;
+        text-transform:uppercase;
+    }
+}
+
+
+
+
+
 svg#circlesSVG{
 // width:100%;
 // height:auto;
 // display:block;
 
-}
-.cs-headline{
-    position: absolute;
-    top:0;left:0;
 }

@@ -1,15 +1,29 @@
 .cs-lineworkSVG {
   display: block;
-  border: 1px solid red;
   width: 60%;
   margin: auto;
   position: relative;
   left: -10%; }
 
-.cs-headline {
-  position: absolute;
-  top: 0;
-  left: 0; }
+.cs-slide {
+  position: relative; }
+  .cs-slide .cs-lineworkSVG {
+    position: absolute;
+    z-index: 99;
+    width: 70%;
+    left: 50%;
+    top: 70%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
+  .cs-slide .cs-headline {
+    position: absolute;
+    display: block;
+    bottom: 0;
+    right: 0;
+    z-index: 99;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase; }
 
 h3 {
   text-align: center;

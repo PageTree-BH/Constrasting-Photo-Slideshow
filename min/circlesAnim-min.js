@@ -24,9 +24,19 @@ var circlesAnim = {
     origX:[],
     origY:[],
     svg:document.getElementById("circlesSVG"),
+    tlm:null,
 
     init: function(){
         this.build(this.num);
+    },
+
+    play: function(){
+        this.tlm.pause(0);
+        // this.tlm.tweenTo(this.tlm.totalDuration()*0.8);
+        this.tlm.play();
+    },
+    reset: function(){
+        this.tlm.pause(0);
     },
 
     build: function(n){
@@ -42,7 +52,7 @@ var circlesAnim = {
 
         // TweenLite.defaultEase = Linear.easeNone;
 
-        var tlm = new TimelineMax({paused:true, delay:2, ease:Linear.easeNone});
+        this.tlm = new TimelineMax({paused:true, ease:Power3.easeInOut});
 
         for (var i = 0; i < this.num; i++) {
             this.origX[i] = (600-40*i)-20;
@@ -80,10 +90,10 @@ var circlesAnim = {
 
 
         for (k = 0; k < this.num; k++) {
-            tlm.to(this.circs[k], 2, {
+            this.tlm.to(this.circs[k], 2, {
                 // attr:{ cx:this.origX, cy:this.origY },
                 attr:{ cx:this.origX[k].toString(), cy:this.origY[k].toString() },
-                ease:Power3.easeInOut},
+                ease:Power2.easeInOut},
                 '-=1.8');
         }
 
@@ -92,11 +102,16 @@ var circlesAnim = {
         // console.log($(this.svg).width());
         // console.log($(this.svg).height());
 
-        console.log($(this.svg).find('circle').length);
+        // console.log($(this.svg).find('circle').length);
 
-        tlm.tweenTo(tlm.totalDuration()*0.8);
+        this.tlm.timeScale(2);
+
+        // this.tlm.tweenTo(this.tlm.totalDuration()*0.8);
+
+
+
         // tlm.addLabel('')
-        // myTimeline.tweenTo("myLabel2");
+        // mydline.tweenTo("myLabel2");
     },
 
 
@@ -115,7 +130,6 @@ var circlesAnim = {
         circle.setAttribute("cx", x);
         circle.setAttribute("cy", y);
         circle.setAttribute("r", "15");
-
         return circle;
 
     }
@@ -123,88 +137,6 @@ var circlesAnim = {
 };
 
 circlesAnim.init();
+// circlesAnim.tlm.tweenTo(circlesAnim.tlm.totalDuration()*0.8);
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-var linesAnim = {
-
-    num:12,
-    lines:[],
-    orig:[],
-    origY:[],
-    svg:document.getElementById("linesSVG"),
-
-    init: function(){
-        this.build(this.num);
-    },
-
-    build: function(n){
-
-        var tlm = new TimelineMax({paused:true, delay:2, ease:Linear.easeNone});
-
-        for (var i = 0; i < this.num; i++) {
-            var newLine = this.buildLine( i * 3 );
-            this.svg.appendChild(   newLine  );
-            this.lines.push( newLine );
-
-        }
-
-        var linesBackwards = this.lines.reverse();
-
-        for (var j = 0; j < this.lines.length; j++) {
-            tlm.to(linesBackwards[j], 1, {
-                x:j * 9 * 2 *j*0.3,
-                ease:Power1.easeInOut
-            }, '-=0.7');
-        }
-
-
-        tlm.play();
-
-    },
-
-
-
-
-    buildLine: function(x) {
-
-        var line = document.createElementNS("http://www.w3.org/2000/svg", "line");
-        line.setAttribute("stroke", "red");
-        line.setAttribute("stroke-width", "1");
-        line.setAttribute("x1", x);
-        line.setAttribute("y1", 20);
-        line.setAttribute("x2", x);
-        line.setAttribute("y2", 100);
-
-        return line;
-
-    }
-};
-
-linesAnim.init();
